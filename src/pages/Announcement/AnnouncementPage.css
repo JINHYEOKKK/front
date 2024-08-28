@@ -1,0 +1,63 @@
+/* AnnouncementPage.css */
+
+.announcement-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .announcement-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .announcement-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+  }
+  
+  .announcement-content {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .announcement-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .category {
+    background-color: #f5f5f5;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  
+  .author {
+    font-weight: bold;
+  }
+  
+  .time {
+    color: #aaa;
+  }
+  
+  .announcement-title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .announcement-footer {
+    font-size: 14px;
+    color: #888;
+  }
+  

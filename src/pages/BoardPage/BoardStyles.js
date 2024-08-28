@@ -225,3 +225,53 @@ export const CommentSubmitButton = styled.button`
     background-color: #45a049;
   }
 `;
+
+export const PostCard = styled.div`
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+export const PostImage = styled.img`
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-right: 1px solid #ddd;
+`;
+
+export const PostContent = styled.div`
+  flex: 1;
+  padding: 10px;
+`;
+
+export const PostHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const PostTitle = styled.h2`
+  font-size: 18px;
+  margin: 0;
+`;
+
+export const PostAuthor = styled.p`
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+`;
+
+export const PostFooter = styled.div`
+  font-size: 12px;
+  color: #999;
+`;
+
+export const CommentsCount = styled.span`
+  font-weight: bold;
+`;

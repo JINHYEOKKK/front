@@ -14,26 +14,26 @@ import NotFoundPage from './pages/ErrorPage/NotFoundPage';
 import BoardDetailPage from './pages/BoardPage/BoardDetailPage';
 import BoardWritePage from './pages/BoardPage/BoardWritePage';
 import MyPage from './pages/MyPage/MyPage';
+import FriendsPage from './pages/FriendsPage/FriendsManagementPage';
+import AnnouncementPage from './pages/Announcement/AnnouncementPage'; // 추가
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-
     <Routes>
-
       <Route path='/' element={<AppLayout />}>
         <Route index element={<HomePage />} />
         
         <Route path="boards">
           <Route path=":boardType" element={<BoardPage />} />
           <Route path=":boardType/write" element={<BoardWritePage />} />
-          <Route path=":boardType/:id" element={<BoardDetailPage />} />
+          <Route path=":boardsType/:boardId" element={<BoardDetailPage />} />
         </Route>
 
         <Route path="login" element={<LoginPage />} />
-          <Route path="members/find-id" element={<FindIdPage />} />
-          <Route path="members/find-pw" element={<FindPasswordInitPage />} />
-          <Route path="members/find-pw/:memberId" element={<FindPasswordResetPage />} />
+        <Route path="members/find-id" element={<FindIdPage />} />
+        <Route path="members/find-pw" element={<FindPasswordInitPage />} />
+        <Route path="members/find-pw/:memberId" element={<FindPasswordResetPage />} />
 
         <Route path="sign-up">
           <Route index element={<SignUpTermsPage />} />
@@ -41,15 +41,17 @@ function App() {
         </Route>
 
         <Route path="mypage" element={<MyPage />} />
+        <Route path="friends" element={<FriendsPage />} />
 
-        <Route path="members/find-id" element={<FindIdPage />}/>
-        <Route path="members/find-pw" element={<FindPasswordInitPage />}/>
-        <Route path="members/find-pw/:memberId" element={<FindPasswordResetPage />}/>
+        <Route path="members/find-id" element={<FindIdPage />} />
+        <Route path="members/find-pw" element={<FindPasswordInitPage />} />
+        <Route path="members/find-pw/:memberId" element={<FindPasswordResetPage />} />
 
-        <Route path="*" element={<NotFoundPage />}/>
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
-      <Route path="map" element={<KakaoMap/>} /> 
+      <Route path="map" element={<KakaoMap />} /> 
     </Routes>
   );
 }
+
 export default App;
